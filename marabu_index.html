@@ -8,6 +8,7 @@
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+    /* Variables CSS de la identidad visual del sitio */
     :root {
       --verde: #1a3a1a;
       --verde-med: #2d5a2d;
@@ -21,8 +22,10 @@
       --naranja: #d4622a;
     }
 
+    /* Scroll suave en anclas internas (#seccion) */
     html { scroll-behavior: smooth; }
 
+    /* Estilo base de toda la página */
     body {
       font-family: 'Barlow', sans-serif;
       background: var(--negro);
@@ -30,7 +33,7 @@
       overflow-x: hidden;
     }
 
-    /* ── NAV ─────────────────────────────────────────── */
+    /* ── NAV: barra superior fija de navegación ─────── */
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
@@ -58,12 +61,11 @@
     }
     .nav-cta:hover { background: var(--crema); }
 
-    /* ── HERO ─────────────────────────────────────────── */
+    /* ── HERO: portada principal con llamada a acción ─ */
     #hero {
       min-height: 100vh;
       background: 
-        linear-gradient(to bottom, rgba(13,26,13,.4) 0%, rgba(13,26,13,.7) 60%, var(--negro) 100%),
-        url('https://images.unsplash.com/photo-1530866495561-507c9faab2ed?w=1600&q=80') center/cover no-repeat;
+        linear-gradient(to bottom, rgba(13,26,13,.4) 0%, rgba(13,26,13,.7) 60%, var(--negro) 100%);
       display: flex; flex-direction: column; justify-content: flex-end;
       padding: 0 48px 80px;
       position: relative;
@@ -121,7 +123,7 @@
       writing-mode: vertical-rl;
     }
 
-    /* ── STATS BAR ───────────────────────────────────── */
+    /* ── STATS BAR: métricas rápidas del campamento ─── */
     .stats-bar {
       display: flex; justify-content: center;
       background: var(--verde);
@@ -144,7 +146,7 @@
       margin-top: 4px;
     }
 
-    /* ── SECTION SHARED ──────────────────────────────── */
+    /* ── SECTION SHARED: tipografías base de secciones ─ */
     section { padding: 96px 48px; }
     .section-tag {
       font-family: 'Barlow Condensed', sans-serif;
@@ -163,7 +165,7 @@
       max-width: 600px; margin-top: 20px;
     }
 
-    /* ── NOSOTROS ────────────────────────────────────── */
+    /* ── NOSOTROS: bloque de presentación del proyecto ─ */
     #nosotros {
       background: var(--negro);
       display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
@@ -200,7 +202,7 @@
       font-size: 28px; color: var(--blanco); line-height: 1;
     }
 
-    /* ── QUIÉNES ─────────────────────────────────────── */
+    /* ── QUIÉNES: perfiles de participantes ─────────── */
     #quienes {
       background: var(--verde);
     }
@@ -541,7 +543,6 @@
 <!-- NOSOTROS -->
 <section id="nosotros">
   <div class="about-img fade-up">
-    <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80" alt="Aventura Ma Rabu">
     <div class="about-img-badge">
       <span>Aventura</span>
       <strong>100% México</strong>
@@ -567,7 +568,6 @@
   </div>
   <div class="act-grid">
     <div class="act-card fade-up">
-      <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?w=600&q=80" alt="Canotismo">
       <div class="act-card-overlay">
         <span class="act-tag">Extremo</span>
         <h4>Canotismo</h4>
@@ -575,7 +575,6 @@
       </div>
     </div>
     <div class="act-card fade-up" style="transition-delay:.08s">
-      <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=600&q=80" alt="Rafting">
       <div class="act-card-overlay">
         <span class="act-tag">Extremo</span>
         <h4>Rafting</h4>
@@ -583,7 +582,6 @@
       </div>
     </div>
     <div class="act-card fade-up" style="transition-delay:.16s">
-      <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600&q=80" alt="Rappel">
       <div class="act-card-overlay">
         <span class="act-tag">Altura</span>
         <h4>Rappel</h4>
@@ -591,7 +589,6 @@
       </div>
     </div>
     <div class="act-card fade-up" style="transition-delay:.24s">
-      <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80" alt="Vistas">
       <div class="act-card-overlay">
         <span class="act-tag">Naturaleza</span>
         <h4>Vistas</h4>
@@ -599,7 +596,6 @@
       </div>
     </div>
     <div class="act-card fade-up" style="transition-delay:.32s">
-      <img src="https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?w=600&q=80" alt="Saltos">
       <div class="act-card-overlay">
         <span class="act-tag">Adrenalina</span>
         <h4>Saltos al Río</h4>
@@ -607,7 +603,6 @@
       </div>
     </div>
     <div class="act-card fade-up" style="transition-delay:.4s">
-      <img src="https://images.unsplash.com/photo-1445308394109-4ec2920981b1?w=600&q=80" alt="Más aventuras">
       <div class="act-card-overlay">
         <span class="act-tag">Sorpresa</span>
         <h4>Y mucho más</h4>
@@ -646,7 +641,6 @@
   <h2 class="section-title fade-up">Siempre México,<br>siempre nuevo</h2>
   <div class="ubic-grid">
     <div class="ubic-img fade-up">
-      <img src="https://images.unsplash.com/photo-1518105779142-d975f22f1b0a?w=800&q=80" alt="Ríos de México">
     </div>
     <div class="ubic-list fade-up" style="transition-delay:.15s">
       <div class="ubic-item">
@@ -682,6 +676,7 @@
 </section>
 
 <!-- CONTACTO / INSCRIPCIÓN -->
+<!-- Sección donde mostramos beneficios y el formulario embebido -->
 <section id="contacto">
   <div class="contact-info fade-up">
     <div class="section-tag">Únete</div>
@@ -702,8 +697,10 @@
       </div>
     </div>
   </div>
+  <!-- Contenedor visual del formulario -->
   <div class="form-wrap fade-up" style="transition-delay:.15s" netlify>
     <div class="form-title">Formulario de Inscripción</div>
+    <!-- Google Form embebido con dimensiones fijas -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdwz_1WbrVyrn5zJrps7bX-w95DN9XAQVW4docQTzci7BzaoA/viewform?embedded=true" width="640" height="2343" frameborder="0" marginheight="0" marginwidth="0" netlify>Cargando…</iframe>
   </div>
 </section>
@@ -724,7 +721,7 @@
 </footer>
 
 <script>
-  // Intersection Observer para fade-up
+  // Observa elementos .fade-up y les agrega .visible al entrar al viewport
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -733,9 +730,10 @@
     });
   }, { threshold: 0.1 });
 
+  // Activa la animación de entrada en todos los elementos marcados como .fade-up
   document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-  // Nav scroll effect
+  // Cambia el fondo del nav al hacer scroll para mejorar legibilidad
   window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     if (window.scrollY > 80) {
